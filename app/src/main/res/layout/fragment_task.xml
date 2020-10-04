@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_f2f2f2"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_name"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"/>
+
+
+    <EditText
+        android:id="@+id/name_et"
+        android:layout_width="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/name_tv"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@id/name_et"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"/>
+
+
+
+    <EditText
+        android:id="@+id/description_et"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:maxLines="4"
+        android:layout_below="@id/description_tv"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+
+
+    <LinearLayout
+        android:id="@+id/start_time_container"
+        android:layout_below="@id/description_et"
+        android:layout_margin="6dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/start_time_btn"
+            android:layout_width="140dp"
+            android:layout_gravity="center"
+            android:text="@string/start_time"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/start_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:textSize="18sp"
+            tools:text="12:00"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/end_time_container"
+        android:layout_below="@id/start_time_container"
+        android:orientation="horizontal"
+        android:layout_margin="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/end_time_btn"
+            android:layout_width="140dp"
+            android:layout_gravity="center"
+            android:text="@string/end_time"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/end_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:textSize="18sp"
+            tools:text="12:00"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/day_container"
+        android:layout_below="@id/end_time_container"
+        android:orientation="horizontal"
+        android:layout_margin="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/day_btn"
+            android:layout_width="140dp"
+            android:layout_gravity="center"
+            android:text="@string/day"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/day_tv"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:textSize="18sp"
+            tools:text="12:00"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_group_btn"
+        android:layout_width="140dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/day_container"
+        android:background="@color/gray_A9A9A9"
+        android:text="@string/add_group"
+        android:layout_height="40dp"/>
+
+
+    <com.google.android.gms.maps.MapView
+        android:layout_width="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/add_group_btn"
+        android:layout_centerInParent="true"
+        android:layout_height="180dp"
+        android:id="@+id/map"/>
+
+
+    <LinearLayout
+        android:layout_below="@id/map"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/save_task_btn"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/save_task"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/delete_task_btn"
+            android:layout_width="wrap_content"
+            android:text="@string/delete_task"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/add_group_container"
+        android:orientation="vertical"
+        android:background="@color/blur_80"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="430dp">
+
+            <TextView
+                android:id="@+id/group_title"
+                android:layout_width="match_parent"
+                android:text="@string/select_groups"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="50dp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/group_recycler_view"
+                android:layout_below="@id/group_title"
+                android:layout_above="@id/done_btn"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <Button
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:text="@string/done"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TaskApp</string>
+    <string name="groups">Create Group</string>
+    <string name="add_task">add task</string>
+    <string name="task_name">Task Name</string>
+    <string name="description">description</string>
+    <string name="start_time">set start time</string>
+    <string name="end_time">set end time</string>
+    <string name="day">set day</string>
+    <string name="until">until</string>
+    <string name="at">at</string>
+    <string name="add_groups">add groups</string>
+    <string name="save_task">save task</string>
+    <string name="delete_task">delete task</string>
+    <string name="add_group">add group</string>
+    <string name="select_groups">Select groups</string>
+    <string name="done">done</string>
+    <string name="group_name">Group Name</string>
+    <string name="select_users">Select Users</string>
+    <string name="save_group">save group</string>
+    <string name="delete_group">delete group</string>
+    <string name="calendar">Calendar</string>
+    <string name="select_group">Select group</string>
+    <string name="tasks">Tasks</string>
+</resources>

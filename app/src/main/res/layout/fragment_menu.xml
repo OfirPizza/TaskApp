@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2f2f2"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/calender_tv"
+        android:text="@string/calendar"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/create_group_tv"
+        android:background="@color/gray_A9A9A9"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="50dp" />
+
+
+    <TextView
+        android:id="@+id/create_group_tv"
+        android:layout_centerInParent="true"
+        android:background="@color/gray_A9A9A9"
+        android:layout_marginBottom="20dp"
+        android:text="@string/groups"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="50dp" />
+
+
+    <TextView
+        android:id="@+id/add_task_tv"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/create_group_tv"
+        android:background="@color/gray_A9A9A9"
+        android:text="@string/add_task"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="50dp" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
